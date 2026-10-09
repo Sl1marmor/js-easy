@@ -2,7 +2,14 @@
 // на певний символ, наприклад *.
 
 function replaceVowels(str) {
-  // Ваш код тут
+  const vowels = "aeiouy";
+  let result = "";
+
+  for (const char of str) {
+    result += vowels.includes(char.toLowerCase()) ? "*" : char;
+  }
+
+  return result;
 }
 
 console.log(replaceVowels("hello world")); // Виведе: "h*ll* w*rld"
